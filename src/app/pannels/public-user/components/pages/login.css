@@ -1,0 +1,232 @@
+.unicx-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 15%, rgba(6, 116, 255, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 82%, rgba(0, 170, 142, 0.16), transparent 36%),
+    linear-gradient(140deg, #f6faff 0%, #f3f7ff 45%, #f9fbff 100%);
+}
+
+.unicx-login-shell {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 640px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 26px 64px rgba(6, 18, 55, 0.16);
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.unicx-login-visual {
+  position: relative;
+  overflow: hidden;
+  background: #0d2f70;
+}
+
+.unicx-login-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.1);
+}
+
+.unicx-login-visual-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(170deg, rgba(5, 18, 43, 0.72), rgba(16, 44, 93, 0.45));
+  color: #ffffff;
+  padding: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.unicx-login-visual-overlay h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.unicx-login-visual-overlay p {
+  margin: 0 0 18px;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.unicx-login-visual-overlay ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.unicx-login-visual-overlay li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.unicx-login-visual-overlay li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4bd5b5;
+}
+
+.unicx-login-panel {
+  padding: 44px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.unicx-login-logo {
+  margin-bottom: 22px;
+}
+
+.unicx-login-logo .logo {
+  max-height: 40px;
+  width: auto;
+}
+
+.unicx-login-title {
+  margin: 0 0 6px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #12254a;
+}
+
+.unicx-login-subtitle {
+  margin: 0 0 22px;
+  color: #5c6b88;
+  font-size: 0.98rem;
+}
+
+.unicx-login-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+  background: #f0f5ff;
+  margin-bottom: 18px;
+}
+
+.unicx-login-tabs button {
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #3e4f72;
+  font-weight: 600;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unicx-login-tabs button.active {
+  background: #ffffff;
+  color: #113070;
+  box-shadow: 0 8px 20px rgba(9, 30, 70, 0.08);
+}
+
+.unicx-login-error {
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  background: #fff4f4;
+  border: 1px solid #ffd6d6;
+  color: #bb2424;
+  font-size: 0.92rem;
+}
+
+.unicx-login-form {
+  display: grid;
+  gap: 8px;
+}
+
+.unicx-login-form label {
+  color: #24365e;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.unicx-login-form input {
+  height: 46px;
+  border: 1px solid #d3ddf1;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 0.98rem;
+  color: #15284f;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.unicx-login-form input:focus {
+  outline: none;
+  border-color: #4379ff;
+  box-shadow: 0 0 0 4px rgba(67, 121, 255, 0.15);
+}
+
+.unicx-login-submit {
+  margin-top: 10px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #0e53d8, #1d79ff);
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 22px rgba(17, 83, 216, 0.3);
+}
+
+.unicx-login-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(17, 83, 216, 0.35);
+}
+
+@media (max-width: 991px) {
+  .unicx-login-shell {
+    max-width: 560px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .unicx-login-visual {
+    min-height: 240px;
+  }
+
+  .unicx-login-visual-overlay {
+    padding: 28px 24px;
+  }
+
+  .unicx-login-visual-overlay h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .unicx-login-page {
+    padding: 14px;
+  }
+
+  .unicx-login-panel {
+    padding: 26px 18px;
+  }
+}

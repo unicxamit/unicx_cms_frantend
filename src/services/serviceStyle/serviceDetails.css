@@ -1,0 +1,234 @@
+.servicedetails-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #edf3ff 0%, #f7f9fc 45%, #f4f6fb 100%);
+  padding: 16px 0 28px;
+}
+
+.servicedetails-shell {
+  width: min(1280px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.servicedetails-topbar {
+  border: 1px solid #dfe5ef;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.servicedetails-title {
+  margin: 0;
+  font-size: 24px;
+  color: #172033;
+}
+
+.servicedetails-subtitle {
+  margin: 4px 0 0;
+  color: #5e6a82;
+  font-size: 13px;
+}
+
+.servicedetails-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.servicedetails-stat-chip {
+  border: 1px solid #d7e0f0;
+  background: #ffffff;
+  color: #34415e;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicedetails-stat-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 41, 88, 0.1);
+}
+
+.servicedetails-alert {
+  margin: 0 0 12px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.servicedetails-alert.success {
+  border: 1px solid #b8e2c8;
+  color: #0d5a2f;
+  background: #eefcf4;
+}
+
+.servicedetails-form {
+  display: grid;
+  gap: 12px;
+}
+
+.servicedetails-panel {
+  border: 1px solid #e1e6f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 14px;
+  box-shadow: 0 6px 16px rgba(18, 28, 52, 0.04);
+}
+
+.servicedetails-panel-title {
+  margin: 0 0 12px;
+  font-size: 17px;
+  color: #1f2b44;
+}
+
+.servicedetails-card {
+  border: 1px solid #e6ebf3;
+  border-radius: 12px;
+  background: #fcfdff;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicedetails-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd8f0;
+  box-shadow: 0 10px 20px rgba(21, 38, 78, 0.08);
+}
+
+.servicedetails-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.servicedetails-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2b44;
+}
+
+.servicedetails-remove-btn {
+  margin-left: auto;
+}
+
+.servicedetails-preview {
+  width: 100%;
+  max-height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #d8dfeb;
+}
+
+.servicedetails-editor-shell {
+  border: 1px solid #d7dfec;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicedetails-editor-shell:focus-within {
+  border-color: #4b7bec;
+  box-shadow: 0 0 0 3px rgba(75, 123, 236, 0.14);
+}
+
+.servicedetails-editor-shell.invalid {
+  border-color: #dc3545;
+}
+
+.servicedetails-actionbar {
+  position: sticky;
+  bottom: 10px;
+  z-index: 4;
+  border: 1px solid #dfe5ef;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicedetails-page .form-control,
+.servicedetails-page .form-select {
+  border-color: #d7deea;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicedetails-page .form-control:not(textarea),
+.servicedetails-page .form-select {
+  min-height: 36px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.servicedetails-page .form-control:focus,
+.servicedetails-page .form-select:focus {
+  border-color: #4b7bec;
+  box-shadow: 0 0 0 3px rgba(75, 123, 236, 0.16);
+}
+
+.servicedetails-upload-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #45526d;
+}
+
+.servicedetails-file-input {
+  border: 1px dashed #b9c7e2;
+  border-radius: 10px;
+  background: #f8fbff;
+  color: #33415f;
+  min-height: 44px;
+  padding: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.servicedetails-file-input:hover {
+  border-color: #7e9edc;
+  background: #f2f7ff;
+}
+
+.servicedetails-file-input:focus {
+  border-color: #4b7bec;
+}
+
+.servicedetails-file-input::file-selector-button {
+  border: 1px solid #ccd7eb;
+  background: #ffffff;
+  color: #2f3f61;
+  padding: 5px 12px;
+  border-radius: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.servicedetails-file-input::file-selector-button:hover {
+  background: #eef3ff;
+  border-color: #9cb5e4;
+}
+
+@media (max-width: 900px) {
+  .servicedetails-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicedetails-title {
+    font-size: 21px;
+  }
+
+  .servicedetails-actionbar {
+    position: static;
+  }
+}

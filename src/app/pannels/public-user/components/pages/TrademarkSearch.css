@@ -1,0 +1,608 @@
+/* TrademarkSearch.css */
+
+/* Main container */
+.trademark-search-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f9fafb;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 33.333%;
+    padding: 1.5rem;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#1967d2; /* rose-500 */
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    margin-bottom: 0.5rem;
+    color: #374151; /* gray-700 */
+  }
+  
+  .search-box {
+    display: flex;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-right: none;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #1967d2;
+  }
+  
+  .search-button {
+    background-color: #1967d2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    cursor: pointer;
+  }
+  
+  .filter-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: white;
+  }
+  
+  /* Main content area styles */
+  .main-content {
+    width: 66.667%;
+    padding: 1.5rem;
+  }
+  
+  .search-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-title {
+    font-size: 1.25rem;
+    color: #1967d2;
+  }
+  
+  .notification-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1967d2;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-button {
+    background-color: white;
+    color: #1967d2;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .loading-container {
+    text-align: center;
+    padding: 2.5rem 0;
+  }
+  
+  .loading-text {
+    font-size: 1.125rem;
+  }
+  
+  .error-message {
+    background-color: #fee2e2;
+    border: 1px solid #f87171;
+    color: #1967d2;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Trademark item styles */
+  .trademark-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .trademark-header {
+    background-color: #1967d2;
+    color: white;
+    padding: 0.75rem;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+  
+  .trademark-content {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+  
+  .trademark-details {
+    flex-grow: 1;
+  }
+  
+  .trademark-name {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trademark-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .label-text {
+    font-weight: 600;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  .trademark-logo {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .unix-logo {
+    font-size: 2.25rem;
+    font-family: serif;
+    font-style: italic;
+  }
+  
+  .no-results {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .no-results p {
+    font-size: 1.125rem;
+  }
+
+  /* Additional CSS for the new class search functionality */
+.class-selector {
+  margin-bottom: 15px;
+}
+
+.class-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.class-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+
+.auto-select-message {
+  font-size: 14px;
+  color: green;
+  margin-top: 8px;
+}
+
+.search-dropdown {
+  margin-top: 10px;
+  padding: 6px;
+  width: 100%;
+  font-size: 14px;
+}
+
+
+
+
+
+/* TrademarkSearch.css */
+
+.trademark-search-container {
+    display: flex; /* Use flexbox for sidebar and main content layout */
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    font-family: sans-serif; /* Basic font */
+    color: #333;
+}
+
+.sidebar {
+    width: 370px; /* Fixed width for the sidebar */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.main-content {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block; /* Make label a block element */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.search-box {
+    display: flex; /* Arrange input and button side-by-side */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden; /* Keep button inside border radius */
+}
+
+.search-input,
+.class-detail-input,
+.class-number-select {
+    padding: 10px;
+    border: none; /* Remove default border */
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+.search-input {
+    flex-grow: 1; /* Allow input to take up most space */
+    outline: none; /* Remove outline on focus */
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.search-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.search-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.class-filter-container {
+    display: flex; /* Arrange input and select side-by-side */
+    gap: 10px; /* Space between elements */
+}
+
+.class-detail-input {
+    flex-grow: 1; /* Allow detail input to take space */
+    border: 1px solid #ccc; /* Add border back as it's not part of search-box */
+    border-radius: 4px;
+}
+
+.class-detail-input:read-only {
+    background-color: #eee; /* Indicate read-only state */
+    cursor: default;
+}
+
+.class-number-select {
+    /* Specific width or flex-basis if needed, otherwise let content dictate */
+    border: 1px solid #ccc; /* Add border back */
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.helper-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.relevant-classes-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.relevant-classes-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.relevant-classes-info li {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.relevant-classes-info li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.search-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-title {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.loading-container,
+.error-message,
+.info-message,
+.initial-message,
+.no-results {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.loading-container {
+    background-color: #fff3cd; /* Light yellow */
+    border-color: #ffecb5;
+    color: #664d03;
+}
+
+.error-message {
+    background-color: #f8d7da; /* Light red */
+    border-color: #f5c2c7;
+    color: #842029;
+}
+
+.info-message {
+    background-color: #d1ecf1; /* Light blue */
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.initial-message {
+    background-color: #e2e3e5; /* Light gray */
+    border-color: #d6d8db;
+    color: #495057;
+    text-align: center;
+}
+
+.no-results {
+    background-color: #e9ecef; /* Light gray */
+    border-color: #dee2e6;
+    color: #495057;
+    text-align: center;
+}
+
+
+.trademark-list {
+    display: grid; /* Use grid for result items */
+    gap: 20px; /* Space between items */
+}
+
+.trademark-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.trademark-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.trademark-content {
+    display: flex; /* Arrange details and logo side-by-side */
+    padding: 15px;
+    gap: 15px; /* Space between details and logo */
+}
+
+.trademark-details {
+    flex-grow: 1; /* Allow details to take up space */
+}
+
+.trademark-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+    font-size: 1.2em;
+}
+
+.trademark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space within the grid */
+    font-size: 0.9em;
+}
+
+.label-text {
+    font-weight: bold;
+    color: #555;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Span across all columns in the grid */
+}
+
+.trademark-logo {
+    width: 100px; /* Fixed width for logo area */
+    height: 100px; /* Fixed height */
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow if image is too big */
+    flex-shrink: 0; /* Prevent logo area from shrinking */
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.trademark-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.trademark-logo .no-logo {
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+    padding: 5px;
+    word-break: break-word; /* Break long words */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .trademark-search-container {
+        flex-direction: column; /* Stack sidebar and main content on smaller screens */
+    }
+.relevant-classes-info{
+  display: none;
+}
+.main-content {
+    width: 100%;
+    padding: 0.5rem;
+}
+.search-title {
+    font-size: 1em;
+
+}
+.label{
+    font-size: 12px;
+}
+    .sidebar {
+        width: 100%; /* Full width */
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .search-input, .class-detail-input, .class-number-select {
+    padding: 5px;
+    font-size: 13px;
+}
+
+    .class-filter-container {
+        flex-direction: column; /* Stack class filter inputs */
+        gap: 15px;
+    }
+.helper-text
+ {
+    font-size: 11px;
+}
+    .trademark-content {
+        flex-direction: column; /* Stack details and logo */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .trademark-logo {
+        margin-top: 15px; /* Add space above logo when stacked */
+    }
+}
+
+
+.class-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.class-detail-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.class-number {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.matching-details {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.matching-detail {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+mark {
+  background-color: #fff9c4;
+  padding: 0 2px;
+  border-radius: 2px;
+}

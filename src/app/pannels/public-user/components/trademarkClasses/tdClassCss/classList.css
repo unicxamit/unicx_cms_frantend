@@ -1,0 +1,542 @@
+
+:root {
+	--color-white: #fafbfa;
+	--color-dark-grey: #333;
+	--color-off-white: #eee8dd;
+	--color-off-white-dark: #e3d9c6;
+	--color-city-primary: #1967D2;
+	--color-city-secondary: #9BBEE7;
+	--color-ski-primary: #279eb2;
+	--color-ski-secondary: #47c2d7;
+	--color-beach-primary: #f86647;
+	--color-beach-secondary: #fb9b88;
+	--color-camping-primary: #00b97d;
+	--color-camping-secondary: #00db93;
+}
+
+.tm-classes-container {
+	width: 100%;
+	padding: 8rem 1rem;
+	background-color: #fff;
+}
+
+.tm-classes-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2.25rem 0;
+}
+
+.tm-page-title {
+	font-size: 2.25rem;
+	font-weight: 600;
+	color: #314259;
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width:1024px) {
+	.tm-page-title {
+		font-size: 60px;
+	}
+
+	.section-title {
+		font-size: 60px;
+	}
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #314259;
+  margin-bottom: 3rem;
+}
+
+.inside-page__btn {
+	background-color: transparent;
+	border: 3px solid;
+	border-radius: .5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	transition: all .3s ease;
+	width: 90%;
+	
+	z-index: 10;
+}
+
+.inside-page__heading--city, .card-front__text-view--city {
+	color: #1d4f96;
+}
+
+.inside-page__heading--ski, .card-front__text-view--ski {
+	color: #2aaac1;
+}
+
+.inside-page__heading--beach, .card-front__text-view--beach {
+	color: #fa7f67;
+}
+
+.inside-page__heading--camping, .card-front__text-view--camping {
+	color: #00b97c;
+}
+
+.inside-page__btn::before {
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: scaleY(0);
+	transition: all .3s ease;
+	width: 100%;
+	z-index: -1;
+}
+
+.inside-page__btn--city {
+	border: 1px solid #1967D2;
+	color: #1967D2;
+}
+
+.inside-page__btn--city::before {
+	background-color: #1967D2;
+	
+}
+
+.inside-page__btn--ski {
+	border-color: #279eb2;
+	color: #279eb2;
+}
+
+.inside-page__btn--ski::before {
+	background-color: #279eb2;
+}
+
+.inside-page__btn--beach {
+	border-color: #fa7f67;
+	color: #fa7f67;
+}
+
+.inside-page__btn--beach::before {
+	background-color: #fa7f67;
+}
+
+.inside-page__btn--camping {
+	border-color: #00b97d;
+	color: #00b97d;
+}
+
+.inside-page__btn--camping::before {
+	background-color: #00b97d;
+}
+
+.inside-page__btn:hover {
+	color: #fafbfa;
+	/* color: #1967D2; */
+}
+
+.inside-page__btn:hover::before {
+	transform: scaleY(1);
+}
+.main {
+	/* background: linear-gradient(to bottom , #dce2ec, #f1f1f1); */
+/* background: linear-gradient(135deg, #0A0F28, #000814); */
+background: #ffffff;
+/* background-color: #b6c8e6; */
+	/* background-color: #f6f8f9; */
+	padding: 2rem 0;
+	/* box-sizing: border-box;  */
+	/* position: relative; */
+	/* border:1px solid red; */
+}
+.card-area {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: 2rem;
+	row-gap: 6rem;
+	padding: 0.75rem 0;
+	justify-items: center;
+}
+
+.tm-card-group {
+	padding: 0.6rem;
+}
+
+.main > .tm-card-group:first-child {
+	margin-top: 3rem;
+}
+
+.card-container-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-shell {
+  width: var(--card-closed-width, 11.25rem);
+  height: 11.25rem;
+  position: relative;
+}
+
+.card {
+  background-color: transparent;
+  /* box-shadow: 0 20px ,10px, 20px, rgpa(0,0,0,0.05); */
+  --card-closed-width: 11.25rem;
+  --card-open-width: 22.5rem;
+  --bs-card-border-width: 0;
+  --bs-card-border-color: transparent;
+  width: var(--card-closed-width);
+  height: 11.25rem;
+  position: relative;
+  left: 0;
+  transition: all 1s ease;
+  transform: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border: none !important;
+}
+
+.flip-card {
+	height: 11.25rem;
+
+	perspective: 100rem;
+	position: absolute;
+	right: 0;
+	transition: all 1s ease;
+	visibility: hidden;
+	width: var(--card-closed-width);
+	z-index: 100;
+}
+
+.flip-card > * {
+	visibility: visible;
+}
+
+.flip-card__container {
+	background-color: transparent;
+
+	height: 100%;
+	position: absolute;
+	right: 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transition: all 1s ease;
+	width: 100%;
+}
+
+.card-front, .card-back {
+	backface-visibility: hidden;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+}
+
+.card-back {
+	background-color: transparent;
+	transform: rotateY(180deg);
+}
+
+.card-front__tp {
+	align-items: center;
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	height: 9rem;
+	padding: 0.55rem;
+}
+
+
+.card-back--city {
+	background: #d6e6fb;
+}
+
+.card-back--ski {
+	background: #d6f3f9;
+}
+
+.card-back--beach {
+	background: #ffe1d8;
+}
+
+.card-back--camping {
+	background: #daf4e8;
+}
+
+.card--city {
+	background: #e8f1ff;
+}
+
+.card--ski {
+	background: #e4f7fb;
+}
+
+.card--beach {
+	background: #ffe9e3;
+}
+
+.card--camping {
+	background: #e5f9f1;
+}
+.card-front--city {
+	background: #e8f1ff;
+}
+
+.card-front--ski {
+	background: #e4f7fb;
+}
+
+.card-front--beach {
+	background: #ffe9e3;
+}
+
+.card-front--camping {
+	background: #e5f9f1;
+}
+.card-front__tp--city {
+	background: linear-gradient(90deg, #9bbee7, #1967D2);
+}
+
+.card-front__tp--ski {
+	background: linear-gradient(to bottom, var(--color-ski-secondary), var(--color-ski-primary));
+}
+
+.card-front__tp--beach {
+	background: linear-gradient(to bottom, var(--color-beach-secondary), var(--color-beach-primary));
+}
+
+.card-front__tp--camping {
+	background: linear-gradient(to bottom, var(--color-camping-secondary), var(--color-camping-primary));
+}
+
+
+.card-front__bt {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.card-front__tp--city + .card-front__bt {
+	background: #dceafd;
+}
+
+.card-front__tp--ski + .card-front__bt {
+	background: #e4f7fb;
+}
+
+.card-front__tp--beach + .card-front__bt {
+	background: #ffe9e3;
+}
+
+.card-front__tp--camping + .card-front__bt {
+	background: #e5f9f1;
+}
+
+.inside-page {
+	background-color: transparent;
+	box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.25);
+	height: 11.25rem;
+	padding: 1rem;
+	position: absolute;
+	right: 0;
+	transition: all 1s ease;
+	width: var(--card-closed-width);
+	z-index: 1;
+}
+
+
+.inside-page--city {
+	background: #eaf3ff;
+}
+
+.inside-page--ski {
+	background: #e4f7fb;
+}
+
+.inside-page--beach {
+	background: #ffe9e3;
+}
+
+.inside-page--camping {
+	background: #e5f9f1;
+}
+.inside-page__container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+	/* border:1px solid red; */
+}
+
+.card-shell:hover .card {
+  width: var(--card-open-width);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  left: calc((var(--card-closed-width) - var(--card-open-width)) / 2);
+  transform: none;
+  border: none !important;
+}
+
+.card-shell:hover .flip-card__container {
+  transform: rotateY(-180deg);
+  transition: transform 1s ease;
+}
+
+.card-shell:hover .inside-page {
+  box-shadow: inset 1rem 0 5rem -2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.TradmarkClassIcons {
+	width: 30%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.tdIcons {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	color:black;
+}
+
+.card-front__heading {
+	font-size: 1.5rem;
+	margin-top: 0.25rem;
+	color: white;
+		
+}
+
+.inside-page__heading, .card-front__text-view {
+	font-size: 1rem;
+	font-weight: 500;
+
+}
+
+.inside-page__text {
+	color: #333;
+}
+
+
+@media (max-width:1399px) {
+	.card-area {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		padding: 0 1rem;
+	}
+.main {
+	
+	padding: 2rem 0;
+
+}
+}
+
+@media (max-width:1024px) {
+	.card-area {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding: 0 2rem;
+	}
+
+	.main {
+		padding: 2rem 0;
+	}
+
+}
+
+@media (max-width:768px) {
+	.card-area {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding: 0 1rem;
+		column-gap: 3rem;
+	}
+
+	.main {
+		padding: 2rem 0;
+	}
+
+} 
+
+
+
+/* General container for the whole section */
+.trademark-container {
+text-align: center;
+  /* margin: 40px auto;  */
+  /* padding:0 24px; */
+  margin-bottom: 2rem;
+
+}
+
+/* Header section containing the icon and title */
+.trademark-header {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  /* margin-bottom: 16px; */
+}
+
+/* Icon (assuming FileText is an SVG or similar icon component) */
+.trademark-icon {
+  width: 28px; /* Size of the icon */
+  height: 28px;
+  margin-right: 12px;
+  color: #007bff; /* A prominent blue color for the icon */
+}
+
+/* Main title */
+.trademark-title {
+  font-size: 1.8em; /* Large, noticeable title */
+  font-weight: 600; /* Semi-bold */
+  color: #333333;
+  margin: 0; /* Remove default margin */
+}
+
+/* Descriptive paragraph */
+.trademark-description {
+  font-size: 1em;
+  color: #666666; /* Softer text color for the description */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Search Input Field */
+.trademark-input {
+  width: 50%; /* Makes the input take the full width of the container */
+  padding: 12px 16px;
+  font-size: 1em;
+  border: 2px solid #cccccc; /* Clear border */
+  border-radius: 6px; /* Slightly rounded corners for the input */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state for the input field (when a user clicks or tabs into it) */
+.trademark-input:focus {
+  border-color: #007bff; /* Blue border when active */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+  outline: none; /* Removes the default browser focus outline */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
